@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom'
 import Home from '../home'
 import About from '../about'
 
-const App = () => (
+export default () => (
     <div>
         <header>
             <Link to="/">Home</Link>
