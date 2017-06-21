@@ -1,18 +1,17 @@
 import React from 'react';
-import { Route, Link } from 'react-router-dom'
+import { Route, Link, Redirect } from 'react-router-dom'
 import Home from '../home'
-import About from '../about'
+import Location from '../change-location'
+import NavigationBar from '../header';
 
 export default () => (
-    <div>
-        <header>
-            <Link to="/">Home</Link>
-            <Link to="/about-us">About</Link>
-        </header>
+    <div className="App">
+        <NavigationBar/>
 
-        <main>
+        <main className="App-main">
             <Route exact path="/" component={Home} />
-            <Route exact path="/about-us" component={About} />
+            <Route exact path="/change-location" component={Location} />
+            <Redirect from="*" to="/" />
         </main>
     </div>
 );
