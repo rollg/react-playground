@@ -11,6 +11,9 @@ const WeatherTable = props => (
         </thead>
         <tbody>
         {getRows(props.weather)}
+        <tr className={ (getRows(props.weather).length > 0 ? 'hide' : 'show') }>
+            <td><h1>Please select the city</h1><h3>from 'Change Location'</h3></td>
+        </tr>
         </tbody>
     </Table>
 );

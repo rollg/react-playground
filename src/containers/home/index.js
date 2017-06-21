@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import {Grid, Row, Col} from 'react-bootstrap';
 import WeatherTable from '../../components/table/table';
+import {getWeatherAsync} from '../../actions/weather';
 
 const Home = props => (
     <Grid>
@@ -22,7 +23,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => bindActionCreators({
-    changePage: () => push('/change-location')
+    changePage: () => push('/change-location'),
+    getWeatherAsync
 }, dispatch);
 
 export default connect(
