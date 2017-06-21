@@ -1,2 +1,3 @@
-export const RECEIVE_WEATHER_OBJECT = 'RECEIVE_WEATHER_OBJECT';
-export const GET_WEATHER_OBJECT = 'GET_WEATHER_OBJECT';
+export const SET_CURRENT_CITY = 'weather/SET_CURRENT_CITY';
+export const SET_WEATHER = 'weather/SET_WEATHER';
+export const GET_WEATHER_REQUEST = 'weather/GET_WEATHER_REQUEST';

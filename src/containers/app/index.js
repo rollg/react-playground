@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Link, Redirect } from 'react-router-dom'
+import { Route, Redirect } from 'react-router-dom'
 import Home from '../home'
 import Location from '../change-location'
 import NavigationBar from '../header';

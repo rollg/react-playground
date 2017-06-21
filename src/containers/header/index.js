@@ -13,17 +13,13 @@ const NavigationBar = props => (
             </Navbar.Brand>
         </Navbar.Header>
         <Nav>
-            <NavItem eventKey={1} onClick={() => props.changePage('/')}
-                     active={props.location === '/'}>Home</NavItem>
-            <NavItem eventKey={2} onClick={() => props.changePage('/change-location')}
-                     active={props.location === '/change-location'}>Change Location</NavItem>
+            <NavItem eventKey={1} onClick={() => props.changePage('/')}>Home</NavItem>
+            <NavItem eventKey={2} onClick={() => props.changePage('/change-location')}>Change Location</NavItem>
         </Nav>
     </Navbar>
 );
 
-const mapStateToProps = state => ({
-    location: window.location.pathname
-});
+const mapStateToProps = state => ({});
 
 const mapDispatchToProps = dispatch => bindActionCreators({
     changePage: (location) => push(location)
