@@ -28,7 +28,7 @@ function getRows(weather) {
         rows.push(<TableRow name={'Humidity'} value={weather['main']['humidity'] + ' %'} key={Math.random()}/>);
         rows.push(<TableRow name={'Sunset'} value={new Date(weather['sys']['sunset']).getHours() + ':' + new Date(weather['sys']['sunset']).getMinutes()} key={Math.random()}/>);
         rows.push(<TableRow name={'Sunrise'} value={new Date(weather['sys']['sunrise']).getHours() + ':' + new Date(weather['sys']['sunrise']).getMinutes()} key={Math.random()}/>);
-        rows.push(<TableRow name={'Geo coords'} value={[weather['coord']['lon'], weather['coord']['lat']]} key={Math.random()}/>);
+        rows.push(<TableRow name={'Geo coords'} value={'[ ' + weather['coord']['lon'] + ' , ' + weather['coord']['lat'] + ']'} key={Math.random()}/>);
     }
 
     return rows
